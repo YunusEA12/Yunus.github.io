@@ -23,6 +23,7 @@ window.addEventListener('wheel', function(e) {
         // Scrolling up
         if (prevSection && window.scrollY > prevSection.offsetTop + prevSection.offsetHeight) {
             window.scroll({ top: prevSection.offsetTop + prevSection.offsetHeight, behavior: 'smooth' });
+            currentSectionIndex--;
         } else if (currentSectionIndex > 0) {
             currentSectionIndex--;
             sections[currentSectionIndex].scrollIntoView({behavior: "smooth"});
